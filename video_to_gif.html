@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Video to GIF</title>
+    <meta name="descrption" content="convert video frames to gif image.">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link rel="icon" type="image/x-icon" href="video_to_gif.webp">
+  </head>
+  <body>
+    <h1>Video to GIF</h1>
+    <input id='inputVideo' type='file' accept='video/mp4,video/webm,video/ogg'>
+    <details class='misc'>
+      <summary>Misc.</summary>
+      FPS<input id='paramFPS' type='number' value='8' max='60' min='1' step='1'>
+      Scale<input id='paramScale' type='number' value='0.9' max='1' min='0.01' step='0.01'>
+      Speed<input id='paramSpeed' type='number' value='1' min='0.1' step='0.1'>
+      Repeat<input id='paramRepeat' type='number' value='0' min='0' step='1'>
+      SampleInterval*<input id='paramSampleInterval' type='number' value='10' min='1' step='1'>
+    </details>
+    <div>
+      <button id='getGIF'>GIF start</button>
+      <button id='reset'>Reset</button>
+    </div>
+    <div class='box'>
+      <!-- crossorigin='anonymous' -->
+      <video id='srcVideo' class='inbox' controls muted preload='auto'></video>
+      <div class='inbox v-center'><img id='destGIF'></div>
+    </div>
+    <button id='download'>Download</button>
+    <script src='lib/Animated_GIF.min.js'></script>
+    <script src='video_to_gif.js'></script>
+  </body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Video Cull</title>
+    <meta name="descrption" content="extract images from video.">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link rel="icon" type="image/x-icon" href="video_to_gif.webp">
+  </head>
+  <body>
+    <h1>Video Cull</h1>
+    <input id='inputVideo' type='file' accept='video/mp4,video/webm,video/ogg'>
+    <div>
+    <button id='record'>Record Start</button>
+    <button id='reset'>Reset</button>
+    </div>
+    <div class='box'>
+      <!-- crossorigin='anonymous' -->
+      <video id='srcVideo' class='inbox' controls muted preload='auto'></video>
+      <div class='inbox v-center'><canvas id='canvas'></canvas></div>
+    </div>
+    <div class='slider'>
+      <input id='recordRange' type='range' max='0' min='0' step='1' value='0'
+             style='width:100%;' oninput='rangeValue.innerText= this.value;'>
+      <input id='rangeValue' type='number' max='0' min='0' step='1' value='0'>
+    </div>
+    <button id='download'>Download</button>
+    <script src='video_cull.js'></script>
+  </body>
+</html>

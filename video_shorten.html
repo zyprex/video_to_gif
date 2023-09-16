@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Video Shorten</title>
+    <meta name="descrption" content="extract video from video.">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link rel="icon" type="image/x-icon" href="video_to_gif.webp">
+  </head>
+  <body>
+    <h1>Video Shorten</h1>
+    <input id='inputVideo' type='file' accept='video/mp4,video/webm,video/ogg'>
+    <div>
+      <button id='record'>Record Start</button>
+      <button id='recordPart'>Record Pause</button>
+      <button id='reset'>Reset</button>
+    </div>
+    <div class='box'>
+      <!-- crossorigin='anonymous' -->
+      <video id='srcVideo' class='inbox' controls muted preload='auto'></video>
+      <video id='destVideo' class='inbox' controls muted preload='auto'></video>
+    </div>
+    <canvas id='shadowCanvas' style='display:none;'></canvas>
+    <button id='download'>Download</button>
+    <script src='video_shorten.js'></script>
+  </body>
+</html>

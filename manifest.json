@@ -1,0 +1,17 @@
+{
+  "name":"Video to GIF",
+  "short_name":"Video to GIF",
+  "start_url":"index.html",
+  "display":"browser",
+  "background_color":"#FFFFFF",
+  "theme_color":"#888888",
+  "scope": ".",
+  "description":"convert video to gif",
+  "icons":[
+    {
+      "src":"video_to_gif.webp",
+      "sizes":"127x127",
+      "type":"image/webp"
+    }
+  ]
+}

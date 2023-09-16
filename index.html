@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Video to GIF</title>
+    <meta name="descrption" content="extract images from video.">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <!-- <link rel="stylesheet" type="text/css" href="style.css" /> -->
+    <link rel="icon" type="image/x-icon" href="video_to_gif.webp">
+
+    <!-- Meta Tags required for Progressive Web App -->
+    <meta name="apple-mobile-web-app-status-bar" content="black">
+    <meta name="theme-color" content="#888888">
+
+    <!-- Manifest File link -->
+    <link rel="manifest" href="manifest.json">
+
+  </head>
+  <body>
+    <p><em>WARN:</em> On low-end device (phone) or old version browser,  incompatible problem, limited performace are inevitable. Those tools are totally client side and have no purpose to bear heavy burden. Please restrain to made the short-time result!</p>
+    <h1><a href='video_cull.html'>Video Cull</a></h1>
+    <p>Series shot video frames, then choose to extract a frame as image.</p>
+    <h1><a href='video_shorten.html'>Video Shorten</a></h1>
+    <p>Cut, rearrange video fragments.</p>
+    <h1><a href='video_to_gif.html'>Video to GIF</a></h1>
+    <p>Convert video to gif.</p>
+    <h1><a href='images_to_gif.html'>Images to GIF</a></h1>
+    <p>Convert images to gif.</p>
+    <p><em>GIF parameter description:</em></p>
+    <pre>FPS: frame per seconds.
+Scale: scale ratio of origin image size.
+Speed: playback speed.
+Repeat: null - no loop, 0 - forever loop, &gt;0 - loop n times.
+SampleInterval*: pixels to skip.</pre>
+    <style>
+footer { padding-top: 10em;width: 24.4vw;margin: auto;text-align: center;}
+footer>* {width: 24.4vw; margin-bottom: 1em;}
+    </style>
+    <footer>
+      <button onclick="clearSiteCache()">Clear Site Cache</button>
+      <a target="_blank" href="https://github.com/zyprex/video_to_gif.html">Source Code</a>
+      <script type='application/javascript'>
+        function clearSiteCache() {
+          caches.delete('video_to_gif').then((ok) => {
+            if (ok) location.reload()
+          });
+        }
+      </script>
+    </footer>
+    <!-- Script for Register Service Worker -->
+    <script src='sw_register.js'></script>
+  </body>
+</html>
